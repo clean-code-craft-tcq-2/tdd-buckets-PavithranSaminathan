@@ -1,10 +1,10 @@
-Include <stdio.h>
+#include <stdio.h>
 
 int CurrentSamples[] = {3, 3, 5, 4, 10, 11, 12};
 
 void ReadNoofSamples(int FromRange , int ToRange , int* TotalSamples)
 {
-  int TotalCurrentSamples = sizeof(CurrentSamples);
+  int TotalCurrentSamples = sizeof(CurrentSamples)/CurrentSamples[0];
   for(int i=0;i<TotalCurrentSamples;i++)
   {
     if(FromRange <= CurrentSamples[i] && ToRange >= CurrentSamples[i])

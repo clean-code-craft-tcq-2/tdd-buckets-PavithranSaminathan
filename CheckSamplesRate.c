@@ -1,6 +1,6 @@
 #include "CheckSamplesRate.h"
 
-void ReadNoofSamples(int FromRange , int ToRange , int* TotalSamples)
+int ReadNoofSamples(int FromRange , int ToRange , int TotalSamples)
 {
   int TotalCurrentSamples = sizeof(CurrentSamples)/CurrentSamples[0];
   for(int i=0;i<TotalCurrentSamples;i++)
@@ -10,4 +10,5 @@ void ReadNoofSamples(int FromRange , int ToRange , int* TotalSamples)
       TotalSamples++;
     }
   }
+  return TotalSamples;
 }

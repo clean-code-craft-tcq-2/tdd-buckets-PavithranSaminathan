@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int CurrentSamples[7];
+const int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 
 void ReadNoofSamples(int FromRange , int ToRange , int* TotalSamples);
 

@@ -5,6 +5,6 @@
 
 const int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 
-int ReadNoofSamples(int FromRange , int ToRange , int TotalSamples);
+int ReadNoofSamples(int FromRange , int ToRange);
 
 #endif

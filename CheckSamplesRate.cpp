@@ -6,7 +6,7 @@
 
 TEST_CASE("Read No of samples from input range")
 {
-  int data;
-  ReadNoofSamples(3,5,&data);
+  int *data;
+  ReadNoofSamples(3,5,data);
   REQUIRE(*data == 3);
 }

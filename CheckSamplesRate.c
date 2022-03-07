@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "CheckSamplesRate.h"
 
 CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 

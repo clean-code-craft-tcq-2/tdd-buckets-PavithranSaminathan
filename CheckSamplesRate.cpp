@@ -8,5 +8,5 @@ TEST_CASE("Read No of samples from input range")
 {
   int Total_samples=0;
   Total_samples=ReadNoofSamples(3,5);
-  REQUIRE(Total_samples == 3);
+  REQUIRE(Total_samples == 4);
 }

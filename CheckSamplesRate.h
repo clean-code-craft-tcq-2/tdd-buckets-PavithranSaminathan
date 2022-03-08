@@ -1,4 +1,4 @@
 #ifndef CheckSamplesRate_h
 #define CheckSamplesRate_h
-int ReadNoofSamples(int FromRange , int ToRange,int TotalCurrentSamples,int *TotalSamples);
+int ReadNoofSamples(int FromRange , int ToRange,int TotalCurrentSamples);
 #endif

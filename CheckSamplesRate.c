@@ -1,5 +1,4 @@
 #include "CheckSamplesRate.h"
-
 int ReadNoofSamples(int FromRange , int ToRange)
 {
   int TotalSamples=0;
@@ -13,4 +12,3 @@ int ReadNoofSamples(int FromRange , int ToRange)
   }
   return TotalSamples;
 }
-

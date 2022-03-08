@@ -5,10 +5,9 @@ int ReadNoofSamples(int FromRange , int ToRange)
 {
   int TotalSamples=0;
   int TotalCurrentSamples = sizeof(CurrentSamples)/sizeof(CurrentSamples[0]);
-   printf("TotalCurrentSamples= %d\n",TotalCurrentSamples);
   for(int i=0;i<TotalCurrentSamples;i++)
   {
-    if(FromRange <= CurrentSamples[i] && ToRange >= CurrentSamples[i])
+    if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
     {
       TotalSamples++;
     }
@@ -17,6 +16,7 @@ int ReadNoofSamples(int FromRange , int ToRange)
       /*do nothing */
     }
   }
-  printf("Total Samples= %d",TotalSamples);
+  printf("TotalCurrentSamples= %d\n",TotalCurrentSamples);
+  printf("Total Samples= %d\n",TotalSamples);
   return TotalSamples;
 }

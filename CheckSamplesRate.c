@@ -12,6 +12,10 @@ int ReadNoofSamples(int FromRange , int ToRange)
     {
       TotalSamples++;
     }
+    else
+    {
+      /*do nothing */
+    }
   }
   printf("Total Samples= %d",TotalSamples);
   return TotalSamples;

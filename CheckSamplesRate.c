@@ -9,6 +9,7 @@ int ReadNoofSamples(int FromRange , int ToRange)
   {
     if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
     {
+      printf("S=%d i=%d\n",CurrentSamples[i],i);
       TotalSamples++;
     }
     else

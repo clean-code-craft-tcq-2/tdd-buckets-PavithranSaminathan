@@ -12,7 +12,7 @@ TEST_CASE("Read No of samples from input range")
   REQUIRE(Total_samples == 4);
 }
 
-TEST_CASE("Read No of samples from input range")
+TEST_CASE("Read No of samples from 2-6 range")
 {
   int Total_samples=0;
   int FromRange=2;

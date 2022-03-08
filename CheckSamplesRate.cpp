@@ -2,7 +2,6 @@
 
 #include "catch.hpp"
 #include "CheckSamplesRate.h"
-#include <stdio.h>
 
 TEST_CASE("Read No of samples from input range")
 {

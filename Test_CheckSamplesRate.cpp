@@ -9,5 +9,5 @@ TEST_CASE("Read No of samples from input range")
   int FromRange=3;
   int ToRange=5;
   Total_samples=ReadNoofSamples(FromRange,ToRange);
-  //REQUIRE(Total_samples == 4);
+  REQUIRE(Total_samples == 4);
 }

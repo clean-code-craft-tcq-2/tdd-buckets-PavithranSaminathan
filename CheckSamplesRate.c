@@ -16,6 +16,6 @@ int ReadNoofSamples(int FromRange , int ToRange,int TotalCurrentSamples,int *Tot
     }
   }
   printf("TotalCurrentSamples= %d\n",TotalCurrentSamples);
-  printf("Total Samples= %d\n",TotalSamples);
-  return TotalSamples;
+  printf("Total Samples= %d\n",*TotalSamples);
+  return *TotalSamples;
 }

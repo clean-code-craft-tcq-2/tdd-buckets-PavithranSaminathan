@@ -1,8 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-
 #include "test/catch.hpp"
 #include "CheckSamplesRate.h"
-
 TEST_CASE("Read No of samples from input range")
 {
   int Total_samples=0;
@@ -11,7 +9,6 @@ TEST_CASE("Read No of samples from input range")
   Total_samples=ReadNoofSamples(FromRange,ToRange);
   REQUIRE(Total_samples == 4);
 }
-
 TEST_CASE("Read No of samples from 2-6 range")
 {
   int Total_samples=0;

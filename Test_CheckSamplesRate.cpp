@@ -5,7 +5,7 @@
 
 TEST_CASE("Read No of samples from input range")
 {
-  const int * CurrentSamples= {3, 3, 5, 4, 10, 11, 12};
+  int * CurrentSamples= {3, 3, 5, 4, 10, 11, 12};
   int Total_samples=0;
   int FromRange=3;
   int ToRange=5;

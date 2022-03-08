@@ -3,5 +3,7 @@
 #include "CheckSamplesRate.h"
 TEST_CASE("Read No of samples from input range")
 {
- REQUIRE(ReadNoofSamples(5,10) == 2);
+ int NoOfSamples=0;
+ ReadNoofSamples(5,10,7,&NoOfSamples);
+ REQUIRE(NoOfSamples== 2);
 }

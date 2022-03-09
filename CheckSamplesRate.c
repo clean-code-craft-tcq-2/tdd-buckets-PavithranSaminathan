@@ -18,7 +18,7 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
   PrintonConsole(PrintData);
 }
   
-int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int ToRange)
+int ReadNoofSamples(int FromRange , int ToRange)
 {
   int NoofOccurance=0;
   if(FromRange < ToRange)

@@ -1,6 +1,18 @@
 #include "CheckSamplesRate.h"
 #include <stdio.h>
 
+void PrintonConsole(char * InputData)
+{
+  Printf("%s",InputData);
+}
+
+void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
+{
+  char *PrintData;
+  sprintf(PrintData,"Ranges= %d-%d  Occurance=%d",FromRange,ToRange,TotalOccurance);
+  PrintonConsole(PrintData);
+}
+  
 int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int ToRange)
 {
   int NoofOccurance=0;
@@ -8,7 +20,6 @@ int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int 
   {
     if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
     {
-      printf("S=%d i=%d\n",CurrentSamples[i],i);
       NoofOccurance++;
     }
     else
@@ -16,7 +27,6 @@ int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int 
       /*do nothing */
     }
   }
-  printf("TotalCurrentSamples= %d\n",TotalSamples);
-  printf("Total Samples= %d\n",NoofOccurance);
+  SendDataToPrint(FromRange ,ToRange ,NoofOccurance);
   return NoofOccurance;
 }

@@ -3,7 +3,7 @@
 
 void PrintonConsole(char * InputData)
 {
-  Printf("%s",InputData);
+  printf("%s",InputData);
 }
 
 void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )

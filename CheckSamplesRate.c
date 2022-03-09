@@ -16,7 +16,7 @@ int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int 
       /*do nothing */
     }
   }
-  printf("TotalCurrentSamples= %d\n",TotalCurrentSamples);
+  printf("TotalCurrentSamples= %d\n",TotalSamples);
   printf("Total Samples= %d\n",NoofOccurance);
   return NoofOccurance;
 }

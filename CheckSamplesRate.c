@@ -1,6 +1,8 @@
 #include "CheckSamplesRate.h"
 #include <stdio.h>
 
+#define INVALID_RANGE 0xFF 
+
 int TotalNoOfSamples=0;
 int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 int TotalSamples=sizeof(CurrentSamples)/sizeof(CurrentSamples[0]);
@@ -20,16 +22,23 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int ToRange)
 {
   int NoofOccurance=0;
-  for(int i=0;i<TotalSamples;i++)
+  if(FromRange < ToRange)
   {
-    if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
+    for(int i=0;i<TotalSamples;i++)
     {
-      NoofOccurance++;
+      if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
+      {
+        NoofOccurance++;
+      }
+      else
+      {
+        /*do nothing */
+      }
     }
-    else
-    {
-      /*do nothing */
-    }
+  }
+  else
+  {
+   NoofOccurance=(int)INVALID_RANGE;
   }
   SendDataToPrint(FromRange ,ToRange ,NoofOccurance);
   return NoofOccurance;

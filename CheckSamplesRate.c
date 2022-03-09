@@ -8,7 +8,7 @@ void PrintonConsole(char * InputData)
 
 void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 {
-  char *PrintData;
+  char PrintData[80];
   sprintf(PrintData,"Ranges= %d-%d  Occurance=%d",FromRange,ToRange,TotalOccurance);
   PrintonConsole(PrintData);
 }

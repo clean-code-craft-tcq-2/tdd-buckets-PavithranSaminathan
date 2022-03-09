@@ -2,6 +2,6 @@
 #define CheckSamplesRate_h
 
 
-ReadNoofSamples(int* Samples,int NoofSamples,int FromRange, int ToRange);
+int ReadNoofSamples(int* Samples,int NoofSamples,int FromRange, int ToRange);
 
 #endif

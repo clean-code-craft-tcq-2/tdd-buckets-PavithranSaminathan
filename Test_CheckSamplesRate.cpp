@@ -6,18 +6,18 @@
 
 TEST_CASE("Read No of samples from 5-10 range")
 {
- TotalNoOfSamples=ReadNoofSamples(CurrentSamples,TotalSamples,5,10);
+ TotalNoOfSamples=ReadNoofSamples(5,10);
  REQUIRE(TotalNoOfSamples == 2);
 }
 
 TEST_CASE("Read No of samples from 3-5 range")
 {
- TotalNoOfSamples=ReadNoofSamples(CurrentSamples,TotalSamples,3,5);
+ TotalNoOfSamples=ReadNoofSamples(3,5);
  REQUIRE(TotalNoOfSamples == 4);
 }
 
 TEST_CASE("Read No of samples from 3-12 range")
 {
- TotalNoOfSamples=ReadNoofSamples(CurrentSamples,TotalSamples,3,12);
+ TotalNoOfSamples=ReadNoofSamples(3,12);
  REQUIRE(TotalNoOfSamples == 7);
 }

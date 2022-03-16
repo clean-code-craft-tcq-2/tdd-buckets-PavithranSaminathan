@@ -11,16 +11,18 @@ void PrintonConsole(char * InputData)
   printf("%s",InputData);
 }
 
-void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
+char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 {
   char PrintData[80];
   sprintf(PrintData,"%d-%d,%d\n",FromRange,ToRange,TotalOccurance);
   PrintonConsole(PrintData);
+  return PrintData;
 }
   
-int ReadNoofSamples(int FromRange , int ToRange)
+char* ReadNoofSamples(int FromRange , int ToRange)
 {
   int NoofOccurance=0;
+  char *Output='\0';
   if(FromRange < ToRange)
   {
     for(int i=0;i<TotalSamples;i++)
@@ -39,6 +41,6 @@ int ReadNoofSamples(int FromRange , int ToRange)
   {
    NoofOccurance=(int)INVALID_RANGE;
   }
-  SendDataToPrint(FromRange ,ToRange ,NoofOccurance);
-  return NoofOccurance;
+  Output = SendDataToPrint(FromRange ,ToRange ,NoofOccurance);
+  return Output;
 }

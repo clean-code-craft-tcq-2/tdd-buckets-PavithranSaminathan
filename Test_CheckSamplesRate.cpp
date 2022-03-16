@@ -11,7 +11,7 @@ int TotalNoOfSamples=0;
 TEST_CASE("Read No of samples from 5-10 range")
 {
  char *Output=ReadNoofSamples(5,10);
- //REQUIRE(TotalNoOfSamples == 2);
+ REQUIRE(strcmp(Output,5-10,2)!=10);
 }
 
 #if 0

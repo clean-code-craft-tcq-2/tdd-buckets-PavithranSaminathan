@@ -10,7 +10,7 @@ int TotalNoOfSamples=0;
 /*Reading occurance betweeen 5-10 range */
 TEST_CASE("Read No of samples from 5-10 range")
 {
- TotalNoOfSamples=ReadNoofSamples(5,10);
+ char *Output=ReadNoofSamples(5,10);
  //REQUIRE(TotalNoOfSamples == 2);
 }
 

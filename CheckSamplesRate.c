@@ -22,7 +22,7 @@ char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance,char *Prin
 char* ReadNoofSamples(int FromRange , int ToRange)
 {
   int NoofOccurance=0;
-  char *Output={'\0'};
+  char *Output;
   if(FromRange < ToRange)
   {
     for(int i=0;i<TotalSamples;i++)

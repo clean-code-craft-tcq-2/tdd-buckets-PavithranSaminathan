@@ -19,10 +19,10 @@ char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance,char *Prin
   return PrintData;
 }
   
-char* ReadNoofSamples(int FromRange , int ToRange)
+char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
 {
   int NoofOccurance=0;
-  char *Output;
+  
   if(FromRange < ToRange)
   {
     for(int i=0;i<TotalSamples;i++)

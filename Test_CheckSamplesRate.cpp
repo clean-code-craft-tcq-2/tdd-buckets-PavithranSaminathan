@@ -12,6 +12,7 @@ int TotalNoOfSamples=0;
 TEST_CASE("Read No of samples from 5-10 range")
 {
  char Output[30]={'\0'};
+ char Expected_Output[30]="5-10,2";
  int Min_Range=5;
  int Max_Range=10;
   

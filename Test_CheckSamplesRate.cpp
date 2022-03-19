@@ -16,7 +16,7 @@ TEST_CASE("Read No of samples from 5-10 range")
  int Max_Range=10;
   
  ReadNoofSamples(Min_Range,Max_Range,Output);
-// REQUIRE(strcmp(Output,"5-10,2") == 0);
+ REQUIRE(strcmp(Output,"5-10,2") == 0);
 }
 
 #if 0

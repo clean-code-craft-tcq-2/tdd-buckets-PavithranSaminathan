@@ -3,6 +3,7 @@
 #include "test/catch.hpp"
 #include "CheckSamplesRate.h"
 #include <stdio.h>
+#include <string.h>
 
 int TotalNoOfSamples=0;
 #define INVALID_RANGE 0xFF
@@ -11,7 +12,7 @@ int TotalNoOfSamples=0;
 TEST_CASE("Read No of samples from 5-10 range")
 {
  char *Output=ReadNoofSamples(5,10);
- REQUIRE(strcmp(Output,5-10,2)!=10);
+ REQUIRE(strcmp(Output,"5-10,2")!=10);
 }
 
 #if 0

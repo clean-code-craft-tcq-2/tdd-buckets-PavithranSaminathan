@@ -11,7 +11,11 @@ int TotalNoOfSamples=0;
 /*Reading occurance betweeen 5-10 range */
 TEST_CASE("Read No of samples from 5-10 range")
 {
- char *Output=ReadNoofSamples(5,10);
+ char *Output;
+ int Min_Range=5;
+ int Max_Range=10;
+  
+ ReadNoofSamples(Min_Range,Max_Range,Output);
  REQUIRE(strcmp(Output,"5-10,2")!=10);
 }
 

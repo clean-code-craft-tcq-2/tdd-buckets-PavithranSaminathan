@@ -41,6 +41,6 @@ char* ReadNoofSamples(int FromRange , int ToRange)
   {
    NoofOccurance=(int)INVALID_RANGE;
   }
-  Output = SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
+  SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
   return Output;
 }

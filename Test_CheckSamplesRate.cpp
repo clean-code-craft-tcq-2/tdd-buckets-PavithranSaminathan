@@ -11,7 +11,7 @@ int TotalNoOfSamples=0;
 /*Reading occurance betweeen 5-10 range */
 TEST_CASE("Read No of samples from 5-10 range")
 {
- char Output[30];
+ char Output[30]={'\0'};
  int Min_Range=5;
  int Max_Range=10;
   

@@ -14,7 +14,7 @@ void PrintonConsole(char * InputData)
 char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance,char *PrintData )
 {
 //  char PrintData[80];
-  sprintf(PrintData,"%d-%d,%d\n",FromRange,ToRange,TotalOccurance);
+  sprintf(PrintData,"%d-%d,%d",FromRange,ToRange,TotalOccurance);
   PrintonConsole(PrintData);
   return PrintData;
 }

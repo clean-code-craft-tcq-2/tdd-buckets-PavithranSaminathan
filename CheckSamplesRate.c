@@ -63,6 +63,7 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
     }
    else
     {
+     printf("invalid range\n");
       NoofOccurance=(int)INVALID_RANGE;
       Output="INVALID_RANGE";
     }

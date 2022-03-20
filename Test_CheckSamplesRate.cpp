@@ -51,7 +51,7 @@ TEST_CASE("Read No of samples from 3-12 range")
 TEST_CASE("Read No of samples from 2-12 range")
 {
  char Expected_Output[30];
- ReadNoofSamples(2,12,Actual_Output);
+ ReadNoofSamples(-1,12,Actual_Output);
  strcpy(Expected_Output,Actual_Output);
  REQUIRE(strcmp("INVALID_RANGE" ,Expected_Output) == 0);
 }
@@ -60,7 +60,7 @@ TEST_CASE("Read No of samples from 2-12 range")
 TEST_CASE("Read No of samples from 3-13 range")
 {
  char Expected_Output[30];
- ReadNoofSamples(3,13,Actual_Output);
+ ReadNoofSamples(3,-1,Actual_Output);
  strcpy(Expected_Output,Actual_Output);
  REQUIRE(strcmp("INVALID_RANGE" ,Expected_Output) == 0);
 }

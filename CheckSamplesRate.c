@@ -59,12 +59,12 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
    if(Status != INVALID_RANGE)
     {
       CountSamples(FromRange,ToRange ,&NoofOccurance );
+      SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
     }
    else
     {
       NoofOccurance=(int)INVALID_RANGE;
+      Output="INVALID_RANGE";
     }
-  SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
-  printf("\n ot = %s",Output);
   return Output;
 }

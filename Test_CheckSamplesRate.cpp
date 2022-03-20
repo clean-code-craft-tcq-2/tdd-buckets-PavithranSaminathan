@@ -20,8 +20,6 @@ TEST_CASE("Read No of samples from 5-10 range")
  REQUIRE(strcmp(Expected_Output,Output) == 0);
 }
 
-#if 0
-
 /*Reading occurance betweeen invalid range range */
 /*Function should return invalid range*/
 TEST_CASE("Test case invalid range")
@@ -43,6 +41,6 @@ TEST_CASE("Read No of samples from 3-12 range")
  TotalNoOfSamples=ReadNoofSamples(3,12);
  REQUIRE(TotalNoOfSamples == 7);
 }
-#endif
+
 
 

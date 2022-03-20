@@ -48,5 +48,8 @@ Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 
 Start Test-driven approach
 
-1. Writing test case to check number of samples founds in input samples
-2. Writing test case to check number invalid boundary value
+## Test Specification Overview
+-------------------------------
+
+1. Checking number of concurrence from given samples between valid range.
+2. Checking maximum range should be less than minimum range.

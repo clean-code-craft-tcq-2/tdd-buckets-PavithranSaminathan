@@ -25,7 +25,7 @@ TEST_CASE("Read No of samples from 5-10 range")
 TEST_CASE("Test case invalid range")
 {
  char Expected_Output[30]="INVALID_OUTPUT";
- ReadNoofSamples(12,3,Output);
+ ReadNoofSamples(12,3,Actual_Output);
  REQUIRE(strcmp(Expected_Output,Actual_Output) == 0);
 }
 
@@ -34,15 +34,16 @@ TEST_CASE("Test case invalid range")
 TEST_CASE("Read No of samples from 3-5 range")
 {
  char Expected_Output[30]="3-5,4";
- TotalNoOfSamples=ReadNoofSamples(3,5,Actual_Output);
+ ReadNoofSamples(3,5,Actual_Output);
  REQUIRE(strcmp(Expected_Output,Actual_Output) == 0);
 }
 
 /*Reading occurance betweeen 3-12 range */
 TEST_CASE("Read No of samples from 3-12 range")
 {
- TotalNoOfSamples=ReadNoofSamples(3,12);
- REQUIRE(TotalNoOfSamples == 7);
+ char Expected_Output[30]="3-12,4";
+ TotalNoOfSamples=ReadNoofSamples(3,12,Actual_Output);
+ REQUIRE(strcmp(Expected_Output,Actual_Output) == 0);
 }
 
 

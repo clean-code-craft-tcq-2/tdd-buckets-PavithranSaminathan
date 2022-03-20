@@ -24,9 +24,9 @@ TEST_CASE("Read No of samples from 5-10 range")
 /*Function should return invalid range*/
 TEST_CASE("Test case invalid range")
 {
- char Expected_Output[30]="INVALID_RANGE";
- ReadNoofSamples(12,3,Actual_Output);
- REQUIRE(strcmp("INVALID_RANGE" ,Actual_Output) == 0);
+ char Expected_Output[30];
+ Expected_Output=ReadNoofSamples(12,3,Actual_Output);
+ REQUIRE(strcmp("INVALID_RANGE" ,Expected_Output) == 0);
 }
 
 

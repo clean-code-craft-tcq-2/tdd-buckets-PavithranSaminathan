@@ -18,7 +18,8 @@ char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance,char *Prin
   PrintonConsole(PrintData);
   return PrintData;
 }
-int CheckValidRange(int* Status, int FromRange , int ToRange)
+
+void CheckValidRange(int* Status, int FromRange , int ToRange)
 {
   if(FromRange>=0 && ToRange >=0)
   {
@@ -36,6 +37,7 @@ int CheckValidRange(int* Status, int FromRange , int ToRange)
     *Status = (int)INVALID_RANGE;
   }
 }
+
 void CountSamples(int FromRange,int ToRange ,int *NoofOccurance )
 {
    for(int i=0;i<TotalSamples;i++)
@@ -64,7 +66,6 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
    else
     {     
       NoofOccurance=(int)INVALID_RANGE;
-      Output="INVALID_RANGE";
       sprintf(Output,"INVALID_RANGE");
      printf("%s",Output);
     }

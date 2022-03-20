@@ -24,16 +24,16 @@ int CheckValidRange(int* Status, int FromRange , int ToRange)
   {
     if(FromRange < ToRange)
     {
-      status = (int)STATUS_OK;
+      Status = (int)STATUS_OK;
     }
     else
     {
-      status = (int)NOT_VALID;  
+      Status = (int)INVALID_RANGE;  
     }
   }
   else
   {
-    status = (int)NOT_VALID;
+    Status = (int)INVALID_RANGE;
   }
 }
 void CountSamples(int FromRange,int ToRange ,int *NoofOccurance )
@@ -56,7 +56,7 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
   int NoofOccurance=0;
   int Status;
   CheckValidRange(&Status,FromRange,ToRange);
-   if(Status != NOT_VALID)
+   if(Status != INVALID_RANGE)
     {
       CountSamples(FromRange,ToRange ,&NoofOccurance );
     }

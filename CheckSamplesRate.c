@@ -53,7 +53,7 @@ void CountSamples(int FromRange,int ToRange ,int *NoofOccurance )
     }
 }
 
-char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
+char* ReadNoofSamples(int FromRange , int ToRange , char Output[])
 {
   int NoofOccurance=0;
   int Status;

@@ -1,7 +1,8 @@
 #include "CheckSamplesRate.h"
 #include <stdio.h>
 
-#define INVALID_RANGE 0xFF 
+#define INVALID_RANGE 0xFF
+#define STATUS_OK     0x01
 
 int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 int TotalSamples=sizeof(CurrentSamples)/sizeof(CurrentSamples[0]);
@@ -13,19 +14,31 @@ void PrintonConsole(char * InputData)
 
 char* SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance,char *PrintData )
 {
-//  char PrintData[80];
   sprintf(PrintData,"%d-%d,%d",FromRange,ToRange,TotalOccurance);
   PrintonConsole(PrintData);
   return PrintData;
 }
-  
-char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
+int CheckValidRange(int* Status, int FromRange , int ToRange)
 {
-  int NoofOccurance=0;
-  
-  if(FromRange < ToRange)
+  if(FromRange>=0 && ToRange >=0)
   {
-    for(int i=0;i<TotalSamples;i++)
+    if(FromRange < ToRange)
+    {
+      status = (int)STATUS_OK;
+    }
+    else
+    {
+      status = (int)NOT_VALID;  
+    }
+  }
+  else
+  {
+    status = (int)NOT_VALID;
+  }
+}
+void CountSamples(int FromRange,int ToRange ,int *NoofOccurance )
+{
+   for(int i=0;i<TotalSamples;i++)
     {
       if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
       {
@@ -36,11 +49,21 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
         /*do nothing */
       }
     }
-  }
-  else
-  {
-   NoofOccurance=(int)INVALID_RANGE;
-  }
+}
+
+char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
+{
+  int NoofOccurance=0;
+  int Status;
+  CheckValidRange(&Status,FromRange,ToRange);
+   if(Status != NOT_VALID)
+    {
+      CountSamples(FromRange,ToRange ,&NoofOccurance );
+    }
+   else
+    {
+      NoofOccurance=(int)INVALID_RANGE;
+    }
   SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
   printf("\n ot = %s",Output);
   return Output;

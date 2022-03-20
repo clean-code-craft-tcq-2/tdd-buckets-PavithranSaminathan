@@ -42,8 +42,9 @@ void CountSamples(int FromRange,int ToRange ,int *NoofOccurance )
     {
       if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
       {
-        printf("ff\n");
+     
         *NoofOccurance++;
+           printf("f %d=\n",*NoofOccurance);
       }
       else
       {

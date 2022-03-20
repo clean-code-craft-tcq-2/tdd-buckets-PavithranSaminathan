@@ -62,10 +62,10 @@ char* ReadNoofSamples(int FromRange , int ToRange , char *Output)
       SendDataToPrint(FromRange ,ToRange ,NoofOccurance, Output);
     }
    else
-    {
-     printf("invalid range\n");
+    {     
       NoofOccurance=(int)INVALID_RANGE;
       Output="INVALID_RANGE";
+     printf("%s",Output);
     }
   return Output;
 }

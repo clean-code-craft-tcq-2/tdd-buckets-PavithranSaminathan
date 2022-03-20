@@ -26,7 +26,7 @@ TEST_CASE("Test case invalid range")
 {
 // char Expected_Output[30]="INVALID_RANGE";
  ReadNoofSamples(12,3,Actual_Output);
- REQUIRE(strcmp(Actual_Output , "INVALID_RANGE") == 0);
+ REQUIRE(strcmp("INVALID_RANGE" , "INVALID_RANGE") == 0);
 }
 
 

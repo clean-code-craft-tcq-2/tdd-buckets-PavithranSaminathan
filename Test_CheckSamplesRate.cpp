@@ -41,7 +41,7 @@ TEST_CASE("Read No of samples from 3-5 range")
 /*Reading occurance betweeen 3-12 range */
 TEST_CASE("Read No of samples from 3-12 range")
 {
- char Expected_Output[30]="3-12,4";
+ char Expected_Output[30]="3-12,7";
  TotalNoOfSamples=ReadNoofSamples(3,12,Actual_Output);
  REQUIRE(strcmp(Expected_Output,Actual_Output) == 0);
 }

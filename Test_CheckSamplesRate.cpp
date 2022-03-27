@@ -69,10 +69,12 @@ TEST_CASE("Read No of samples from 3-13 range")
 
 TEST_CASE("Writing integer of array with 12bit Sensor Value and compare with ADC result")
 {
-   int SensorValue[10] = {500 , 700 , 1500 , 3000 , 2500 , 966 , 3600 , 4000};
+   int size =8;
+   int SensorValue[size] = {500 , 700 , 1500 , 3000 , 2500 , 966 , 3600 , 4000};
    //int ExpectedOutput[10] = {1 ,2 , 4, 7 , 6 , 2 ,9 ,10 };
-   int ExpectedOutput[10] = {1, 2, 3, 7, 6, 2, 9, 10};
-   int *ActualOutput = CalculationADCValue(SensorValue , 8u);
+   int ExpectedOutput[size] = {1, 2, 3, 7, 6, 2, 9, 10};
+   
+   int *ActualOutput = CalculationADCValue(SensorValue ,size);
   for(int index=0; 1 > index ; index++)
   {
     REQUIRE(ActualOutput[index] == ExpectedOutput[index]);

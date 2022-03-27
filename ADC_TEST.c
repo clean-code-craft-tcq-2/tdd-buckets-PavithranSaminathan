@@ -13,7 +13,7 @@ int* CalculationADCValue(int * InputSensorValue,int size)
     calculateADCValue =  (((float)10* (float)InputSensorValue[index]) / (float)4094 )+ (float)0.5;
     ActualADCValue[index]= (int)calculateADCValue;
     printf("\n %f   ",calculateADCValue);
-     printf("%d %d\n",InputSensorValue[index] ,sizeof(int));
+     printf("%d %d\n",InputSensorValue[index] ,ActualADCValue[index]);
   }
   
   return ActualADCValue;

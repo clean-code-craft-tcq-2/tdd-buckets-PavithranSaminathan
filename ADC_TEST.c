@@ -3,7 +3,7 @@
 
 int* CalculationADCValue(int * InputSensorValue,int size)
 {
-  int *ActualADCValue = malloc(8 * sizeof(int));
+  int ActualADCValue[size];
   int calculateADCValue;
   
   for(int index=0; size > index ; index++)

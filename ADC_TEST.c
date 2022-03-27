@@ -5,7 +5,7 @@
 int* CalculationADCValue(int * InputSensorValue,int size)
 {
   int ActualADCValue[size];
-  float calculateADCValue;
+  int calculateADCValue;
   
   for(int index=0; size > index ; index++)
   {

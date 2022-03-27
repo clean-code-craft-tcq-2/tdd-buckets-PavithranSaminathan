@@ -1,5 +1,6 @@
 #include "ADC_TEST.h"
 #include <stdlib.h>
+#include  <stdio.h>
 
 int* CalculationADCValue(int * InputSensorValue,int size)
 {
@@ -10,6 +11,7 @@ int* CalculationADCValue(int * InputSensorValue,int size)
   {
      calculateADCValue =  ((10 / 4094) * InputSensorValue[index]) + 0.5;
      ActualADCValue[index]=calculateADCValue;
+    printf("%d\n",calculateADCValue);
   }
   
   return ActualADCValue;

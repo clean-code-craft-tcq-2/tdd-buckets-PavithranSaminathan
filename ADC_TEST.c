@@ -1,4 +1,5 @@
 #include "ADC_TEST.h"
+#include <STDLIB.H>
 
 int* CalculationADCValue(int * InputSensorValue,int size)
 {

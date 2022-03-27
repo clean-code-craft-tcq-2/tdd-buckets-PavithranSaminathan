@@ -78,7 +78,7 @@ TEST_CASE("Writing integer of array with 12bit Sensor Value and compare with ADC
    ActualOutput = CalculationADCValue(SensorValue ,size);
    for(int index=0; 1 > index ; index++)
    {
-   //  REQUIRE(ActualOutput[index] == ExpectedOutput[index]);
+     REQUIRE(ActualOutput[index] == ExpectedOutput[index]);
    }
 }
 

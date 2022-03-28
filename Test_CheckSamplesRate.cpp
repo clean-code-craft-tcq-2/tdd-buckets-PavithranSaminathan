@@ -72,8 +72,7 @@ TEST_CASE("Writing integer of array with 12bit Sensor Value and compare with ADC
    int size =8;
    int *ActualOutput;
    int SensorValue[size] = {500 , 700 , 1500 , 3200 , 2500 , 966 , 3600 , 4000};
-   //int ExpectedOutput[10] = {1 ,2 , 4, 7 , 6 , 2 ,9 ,10 };
-   int ExpectedOutput[size] = {1, 2, 3, 7, 6, 2, 9, 10};
+   int ExpectedOutput[10] = {1 ,2 , 4, 7 , 6 , 2 ,9 ,10 };
    
    CalculationADCValue(SensorValue , ActualOutput ,size);
    for(int index=0; size > index ; index++)

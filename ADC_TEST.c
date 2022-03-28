@@ -3,9 +3,9 @@
 #include  <stdio.h>
 #include <float.h>
 
-int* CalculationADCValue(int * InputSensorValue,int size)
+int* CalculationADCValue(int * InputSensorValue, int *ActualADCValue ,int size)
 {
-  int ActualADCValue[size];
+  
   float calculateADCValue;
   
   for(int index=0; size > index ; index++)

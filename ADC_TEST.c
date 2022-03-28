@@ -24,5 +24,4 @@ void AnalogConvertToCurrentMagnitude(int * SensorValue ,int * *MagnitudeOutput ,
      OutputMagnitudeValue= ((((float)(Max_Magnitude/1023))*(float)(SensorValue[index])) -(Max_Magnitude/2));
      ActualOutput = (int)OutputMagnitudeValue;
   }
-  return MagnitudeOutput;
 }

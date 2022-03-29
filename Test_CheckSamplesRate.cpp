@@ -83,10 +83,10 @@ TEST_CASE("Writing integer of array with 12bit Sensor Value and compare with ADC
 
 TEST_CASE("Writing integer of array with 10bit ADC Value and compare with Current magnitude")
 {
-   int size =3;
+   int size =7;
    int *MagnitudeOutput;
-   int ADCInput[size] = {0 , 512 ,1023};
-   int ExpectedADCOutput[size] = {15 ,0 ,15};
+   int ADCInput[size] = {0 , 100 , 320 , 512 , 880, 900 , 1023};
+   int ExpectedADCOutput[size] = {15 ,14, 11 ,0 ,12, 14, 15};
    
    AnalogConvertToCurrentMagnitude(ADCInput , MagnitudeOutput ,size);
    for(int index=0; size > index ; index++)

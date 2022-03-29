@@ -18,11 +18,11 @@ int* CalculationADCValue(int * InputSensorValue, int *ActualADCValue ,int size)
 void AnalogConvertToCurrentMagnitude(int * SensorValue ,int *MagnitudeOutput ,int size)
 {
   int Max_Magnitude=30;
-  int OutputMagnitudeValue=0;
+  float OutputMagnitudeValue=0;
    for(int index=0; size > index ; index++)
     {
        OutputMagnitudeValue= ((((Max_Magnitude/1023))*(SensorValue[index])) -(Max_Magnitude/2));
        MagnitudeOutput[index] = abs(OutputMagnitudeValue);
-     printf("\ndata= %d  %d", OutputMagnitudeValue ,MagnitudeOutput[index]);
+     printf("\ndata= %f  %d", OutputMagnitudeValue ,MagnitudeOutput[index]);
     }
 }

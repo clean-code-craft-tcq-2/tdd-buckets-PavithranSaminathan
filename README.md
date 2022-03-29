@@ -40,14 +40,16 @@ Range, Readings
 
 Establish quality parameters: 
 
-- What is the maximum complexity (CCN) per function? _enter CCN and create corresponding yml in the `.github/workflows` folder
-- How many lines of duplicate code will you tolerate? _enter the number of lines and create corresponding yml in the `.github/workflows` folder
+- What is the maximum complexity (CCN) per function? 4 CCN 
+- How many lines of duplicate code will you tolerate? 5 lines of duplicate code will be tolerate
 - Ensure 100% line and branch coverage at every step. Include the coverage yml in the workflows.
 
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 
 Start Test-driven approach
 
-1. Write the smallest possible failing test: give input `4,5`. assert output to be `4-5, 2`.
-1. Write the minimum amount of code that'll make it pass.
-1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+## Test Specification Overview
+-------------------------------
+
+1. Checking number of concurrence from given samples between valid range.
+2. Checking maximum range should be less than minimum range.

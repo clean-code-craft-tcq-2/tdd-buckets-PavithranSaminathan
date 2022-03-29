@@ -21,9 +21,9 @@ void AnalogConvertToCurrentMagnitude(int * SensorValue ,int *MagnitudeOutput ,in
   float OutputMagnitudeValue=0;
    for(int index=0; size > index ; index++)
     {
-       OutputMagnitudeValue= ((((Max_Magnitude/1023))*(SensorValue[index]));
+       OutputMagnitudeValue= ((Max_Magnitude/1023)*(SensorValue[index]);
        printf("\ndata= %f ", OutputMagnitudeValue);
-       OutputMagnitudeValue -=(Max_Magnitude/2));
+       OutputMagnitudeValue -=(Max_Magnitude/2);
        MagnitudeOutput[index] = abs(OutputMagnitudeValue);
        printf("data= %f  %d", OutputMagnitudeValue ,MagnitudeOutput[index]);
     }

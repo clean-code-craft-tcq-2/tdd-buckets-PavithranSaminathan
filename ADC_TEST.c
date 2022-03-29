@@ -1,6 +1,7 @@
 #include "ADC_TEST.h"
 #include <stdlib.h>
 #include <float.h>
+#include <stdio.h>
 
 int* CalculationADCValue(int * InputSensorValue, int *ActualADCValue ,int size)
 {
@@ -22,5 +23,6 @@ void AnalogConvertToCurrentMagnitude(int * SensorValue ,int *MagnitudeOutput ,in
     {
        OutputMagnitudeValue= ((((float)(Max_Magnitude/1023))*(float)(SensorValue[index])) -(Max_Magnitude/2));
        MagnitudeOutput[index] = abs(OutputMagnitudeValue);
+     printf("\ndata= %d", MagnitudeOutput[index]);
     }
 }

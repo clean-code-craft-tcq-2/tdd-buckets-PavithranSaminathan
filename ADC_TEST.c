@@ -17,10 +17,10 @@ int* CalculationADCValue(int * InputSensorValue, int *ActualADCValue ,int size)
 void AnalogConvertToCurrentMagnitude(int * SensorValue ,int *MagnitudeOutput ,int size)
 {
   int Max_Magnitude=30;
-  float OutputMagnitudeValue=0;
+  int OutputMagnitudeValue=0;
    for(int index=0; size > index ; index++)
     {
        OutputMagnitudeValue= ((((float)(Max_Magnitude/1023))*(float)(SensorValue[index])) -(Max_Magnitude/2));
-       MagnitudeOutput[index] = (abs)((int)OutputMagnitudeValue);
+       MagnitudeOutput[index] = (abs)OutputMagnitudeValue;
     }
 }

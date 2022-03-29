@@ -88,7 +88,7 @@ TEST_CASE("Writing integer of array with 10bit ADC Value and compare with Curren
    int ADCInput[size] = {0 , 512 ,1023};
    int ExpectedADCOutput[size] = {15 ,0 ,15};
    
-    AnalogConvertToCurrentMagnitude(ADCInput , ActualOutput ,size);
+   AnalogConvertToCurrentMagnitude(ADCInput , MagnitudeOutput ,size);
    for(int index=0; size > index ; index++)
    {
      REQUIRE(MagnitudeOutput[index] == ExpectedADCOutput[index]);

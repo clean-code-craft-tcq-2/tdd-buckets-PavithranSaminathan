@@ -20,7 +20,7 @@ void AnalogConvertToCurrentMagnitude(int * SensorValue ,int *MagnitudeOutput ,in
   float OutputMagnitudeValue=0;
    for(int index=0; size > index ; index++)
     {
-       OutputMagnitudeValue= ((((float)(Max_Magnitude/1023))*(float)(SensorValue[index])) -(Max_Magnitude/2));
-      MagnitudeOutput[index] = (int)OutputMagnitudeValue;
+       OutputMagnitudeValue= ((((float)(Max_Magnitude/1023))*(float)(SensorValue[index])) -(Max_Magnitude/2)) + 0.5;
+       MagnitudeOutput[index] = (abs)OutputMagnitudeValue;
     }
 }
